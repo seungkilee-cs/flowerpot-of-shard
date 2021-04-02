@@ -2,11 +2,11 @@ module.exports = {
   title: `파편을 심는 화분`,
   description: `개측, 개량, 개선에 신경쓰며 글과 노래를 좋아하는 사람의 이야기`,
   author: `ForeverABoy`,
-  introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
-  siteUrl: `https://seungkilee-cs.github.io/flowerpot-of-shard`, // Your blog site url
+  introduction: `오늘 흩뿌려진 생각의 파편을 여기에 심는다. 언젠가 어제가 휘몰아칠때 이것들이 나무가 되어 우리를 지키리라.`,
+  siteUrl: `https://seungkilee-cs.github.io/flowerpot-of-shard/`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
-    github: ``, // Your GitHub account
+    github: `seungkilee.cs`, // Your GitHub account
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
