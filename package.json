@@ -82,10 +82,13 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
+    "serve": "gatsby serve --prefix-paths",
     "lh": "lighthousebot",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
-    "auto-deploy": "git add . && git commit -m \"deployed via auto deploy script\" && git push origin master gatsby build && gh-pages -d public -b public",
-    "deploy": "gatsby build && gh-pages -d public -b public"
+    "deploy -a": "git add . &&  git commit -m \"deployed via auto-deploy\" && git push -u origin master && gatsby build --prefix-paths && gh-pages -d public -b public",
+    "deploy all": "git add . &&  git commit -m \"deployed via auto-deploy\" && git push -u origin master && gatsby build --prefix-paths && gh-pages -d public -b public",
+    "deploy git": "git add . &&  git commit -m \"deployed via auto-deploy\" && git push -u origin master",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b public"
   }
 }
