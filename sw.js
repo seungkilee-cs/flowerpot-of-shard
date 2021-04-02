@@ -26,10 +26,10 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-85868e864b3e359e6936.js"
+    "url": "webpack-runtime-7da3ebc140b0f5b00ba8.js"
   },
   {
-    "url": "styles.728f5d4abe3366a455c3.css"
+    "url": "styles.513f732227da14425446.css"
   },
   {
     "url": "styles-e9d24b1846c7d6eb9685.js"
@@ -38,14 +38,14 @@ self.__precacheManifest = [
     "url": "framework-3154d4619550b80a5138.js"
   },
   {
-    "url": "app-34551fadb36d8e3bb78f.js"
+    "url": "app-404ed8048f1d14c3f0be.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-15096bed533ed0ff8b58.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "60951ab7fdb9bb031c0895e70e6aa92d"
+    "revision": "8cc41da696acf4de8d22370723c2a9dc"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -53,14 +53,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "4b9d8bac6710adfa72216e66101a0c82"
+    "revision": "7fb723b362a017847c743f013ca4c4d8"
   },
   {
     "url": "polyfill-31bd25ec256a9117a66a.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "1a59d146daf5a230fcefcaae6a97a51d"
+    "revision": "fe654d204dacc955d240ced0f743657a"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -79,12 +79,12 @@ const { NavigationRoute } = workbox.routing
 
 const navigationRoute = new NavigationRoute(async ({ event }) => {
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/flowerpot-of-shard`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-34551fadb36d8e3bb78f.js`))) {
+  if (!resources || !(await caches.match(`/flowerpot-of-shard/app-404ed8048f1d14c3f0be.js`))) {
     return await fetch(event.request)
   }
 
@@ -97,7 +97,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/flowerpot-of-shard/offline-plugin-app-shell-fallback/index.html`
   return await caches.match(offlineShell)
 })
 
