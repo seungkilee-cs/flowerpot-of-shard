@@ -87,9 +87,9 @@
     "serve": "gatsby serve --prefix-paths",
     "lh": "lighthousebot",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
-    "deploy -a": "git add . &&  git commit -m \"deployed via auto-deploy\" && git push -u origin master && gatsby build --prefix-paths && gh-pages -d public -b public",
     "git-push": "git add . &&  git commit -m \"deployed via auto-deploy\" && git push -u origin master",
-    "deploy all": "git add . &&  git commit -m \"deployed via auto-deploy\" && git push -u origin master && gatsby build --prefix-paths && gh-pages -d public -b public",
+    "deploy-all": "git add . &&  git commit -m \"deployed via auto-deploy\" && git push -u origin master && gatsby build --prefix-paths && gh-pages -d public -b public",
+    "deploy-git": "git add . &&  git commit -m \"deployed via auto-deploy\" && git push -u origin master",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -b public"
   }
 }
