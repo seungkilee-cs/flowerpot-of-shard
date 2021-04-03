@@ -38,14 +38,14 @@ self.__precacheManifest = [
     "url": "framework-3154d4619550b80a5138.js"
   },
   {
-    "url": "app-404ed8048f1d14c3f0be.js"
+    "url": "app-eea4d0c28c49d35f305b.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-15096bed533ed0ff8b58.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "8cc41da696acf4de8d22370723c2a9dc"
+    "revision": "f5c5a3516dd3c383334c67f486fcc147"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -53,7 +53,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "7fb723b362a017847c743f013ca4c4d8"
+    "revision": "5677444c1b448f83e2b6d5e4a56f5975"
   },
   {
     "url": "polyfill-31bd25ec256a9117a66a.js"
@@ -84,7 +84,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/flowerpot-of-shard/app-404ed8048f1d14c3f0be.js`))) {
+  if (!resources || !(await caches.match(`/flowerpot-of-shard/app-eea4d0c28c49d35f305b.js`))) {
     return await fetch(event.request)
   }
 
