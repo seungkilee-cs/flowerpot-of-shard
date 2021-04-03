@@ -6,16 +6,16 @@ module.exports = {
   siteUrl: `https://seungkilee-cs.github.io/flowerpot-of-shard/`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
-    github: `seungkilee.cs`, // Your GitHub account
+    github: `seungkilee-cs`, // Your GitHub account
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
-    linkedin: ``, // Your LinkedIn account
+    linkedin: `seungkilee`, // Your LinkedIn account
   },
   icon: `content/assets/felog.png`, // Add your favicon
   keywords: [`blog`],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
-    utterances: 'seungkilee-cs/flowerpot-of-shard', // Your repository for archive comment
+    utterances: 'seungkilee-cs/flowerpot-of-shard-comments', // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post
